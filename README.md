@@ -10,7 +10,7 @@ All of the included plugins are pinned to a version that ensures they are compat
 
 As I mentioned, this config is meant as a starting point for people new to Neovim who want a familiar IDE experience. The config has a very simple structure that makes it easy to add new plugins.
 
-## Install Neovim 0.8
+## Install Neovim from Source 
 
 You can install Neovim with your package manager e.g. brew, apt, pacman etc.. but remember that when you update your packages Neovim may be upgraded to a newer version.
 

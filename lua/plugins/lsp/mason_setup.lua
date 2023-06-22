@@ -33,12 +33,13 @@ end
 
 local opts = {}
 
-for _, server in pairs(servers) do
-  opts = {
-    on_attach = require("plugins.lsp.handlers").on_attach,
-    capabilities = require("plugins.lsp.handlers").capabilities,
-  }
 
+opts = {
+  on_attach = require("plugins.lsp.handlers").on_attach,
+  capabilities = require("plugins.lsp.handlers").capabilities,
+}
+
+for _, server in pairs(servers) do
   server = vim.split(server, "@")[1]
 
   local require_ok, conf_opts = pcall(require, "plugins.lsp.settings." .. server)
@@ -48,3 +49,6 @@ for _, server in pairs(servers) do
 
   lspconfig[server].setup(opts)
 end
+
+-- special setup  is required for dartls
+lspconfig.dartls.setup(opts)

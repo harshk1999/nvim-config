@@ -7,7 +7,7 @@ return {
 
     local status_ok, _ = pcall(vim.cmd.colorscheme, colorscheme)
     if not status_ok then
-      print("Error loading colorscheme" .. colorscheme)
+      print("Error loading colorscheme " .. colorscheme)
       return
     end
   end,

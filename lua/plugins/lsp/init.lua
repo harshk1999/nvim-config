@@ -15,7 +15,7 @@ return {
 
       require "plugins.lsp.mason_setup"
       require("plugins.lsp.handlers").setup()
-      require("plugins.lsp.null-ls").setup()
+      require("plugins.lsp.null_ls").setup()
     end,
   },
 }

@@ -1,7 +1,7 @@
 return {
   "nvim-lualine/lualine.nvim",
   commit = "8912bea65de93a56b1f70cdb7c3c26f9cce30394",
-  optinal = true,
+  optional = true,
   dependencies = "nvim-tree/nvim-web-devicons",
   config = function()
     local status_ok, lualine = pcall(require, "lualine")

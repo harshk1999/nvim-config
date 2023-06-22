@@ -1,29 +1,28 @@
 return {
   "akinsho/toggleterm.nvim",
   commit = "95204ece0f2a54c89c4395295432f9aeedca7b5f",
-  opts = {
-    size = 20,
-    open_mapping = [[<c-\>]],
-    hide_numbers = true,
-    shade_terminals = true,
-    shading_factor = 2,
-    start_in_insert = true,
-    insert_mappings = true,
-    persist_size = true,
-    direction = "float",
-    close_on_exit = true,
-    shell = vim.o.shell,
-    float_opts = {
-      border = "curved",
-    },
-  },
   config = function()
     local status_ok, toggleterm = pcall(require, "toggleterm")
     if not status_ok then
-      print("Error loading toggle term")
+      print "Error loading toggle term"
       return
     end
-
+    toggleterm.setup {
+      size = 20,
+      open_mapping = [[<c-\>]],
+      hide_numbers = true,
+      shade_terminals = true,
+      shading_factor = 2,
+      start_in_insert = true,
+      insert_mappings = true,
+      persist_size = true,
+      direction = "float",
+      close_on_exit = true,
+      shell = vim.o.shell,
+      float_opts = {
+        border = "curved",
+      },
+    }
     ---@diagnostic disable-next-line: duplicate-set-field
     function _G.set_terminal_keymaps()
       local opts = { noremap = true }

@@ -1,10 +1,14 @@
 return {
   "goolord/alpha-nvim",
-  commit = "9e33db324b8bb7a147bce9ea5496686ee859461d",
+  -- commit = "9e33db324b8bb7a147bce9ea5496686ee859461d",
   event = "VimEnter",
   dependencies = { "nvim-tree/nvim-web-devicons" },
   config = function()
     local dashboard = require "alpha.themes.dashboard"
+    local status_ok, alpha = pcall(require, "alpha")
+    if not status_ok then
+      return
+    end
     dashboard.section.header.val = {
       [[                               __                ]],
       [[  ___     ___    ___   __  __ /\_\    ___ ___    ]],
@@ -33,5 +37,6 @@ return {
     dashboard.section.buttons.opts.hl = "Keyword"
 
     dashboard.opts.opts.noautocmd = true
+    alpha.setup(dashboard.opts)
   end,
 }

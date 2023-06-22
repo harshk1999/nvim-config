@@ -5,7 +5,7 @@ return {
     dependencies = {
       { "hrsh7th/cmp-buffer" }, -- buffer completions
       { "hrsh7th/cmp-path" }, -- path completions
---      { "saadparwaiz1/cmp_luasnip" }, -- snippet completions
+      { "saadparwaiz1/cmp_luasnip" }, -- snippet completions
       { "hrsh7th/cmp-nvim-lsp" },
       { "hrsh7th/cmp-nvim-lua" },
       { "L3MON4D3/LuaSnip", commit = "8f8d493e7836f2697df878ef9c128337cbf2bb84" }, --snippet engine
@@ -18,11 +18,11 @@ return {
         return
       end
 
-      -- local snip_status_ok, luasnip = pcall(require, "luasnip")
-      -- if not snip_status_ok then
-      --   print "Error loading luasnip"
-      --   return
-      -- end
+      local snip_status_ok, luasnip = pcall(require, "luasnip")
+      if not snip_status_ok then
+        print "Error loading luasnip"
+        return
+      end
 
       --require("luasnip/loaders/from_vscode").lazy_load()
 
@@ -60,11 +60,11 @@ return {
       }
 
       cmp.setup {
-        -- snippet = {
-        --   expand = function(args)
-        --     luasnip.lsp_expand(args.body) -- For `luasnip` users.
-        --   end,
-        -- },
+        snippet = {
+          expand = function(args)
+            luasnip.lsp_expand(args.body) -- For `luasnip` users.
+          end,
+        },
 
         mapping = cmp.mapping.preset.insert {
           ["<C-k>"] = cmp.mapping.select_prev_item(),
@@ -110,7 +110,7 @@ return {
         sources = {
           { name = "nvim_lsp" },
           { name = "nvim_lua" },
-        --  { name = "luasnip" },
+          { name = "luasnip" },
           { name = "buffer" },
           { name = "path" },
         },

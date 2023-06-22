@@ -11,6 +11,12 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- Set Space as leader key
+local opts = { silent = true }
+vim.keymap.set("", "<Space>", "<Nop>", opts)
+vim.g.mapleader = " "
+
 require("lazy").setup "plugins"
---require "autocommands"
+require "autocommands"
 require "options"
+require "keymaps"

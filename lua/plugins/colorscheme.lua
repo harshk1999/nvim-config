@@ -2,6 +2,7 @@ return {
   "arturgoms/moonbow.nvim",
   lazy = false,
   commit = "2564c8a8efc18eb65104c75b404972e4fabd1d25",
+  priority = 1000,
   config = function()
     local colorscheme = "moonbow"
 

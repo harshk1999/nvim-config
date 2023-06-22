@@ -1,6 +1,6 @@
 return {
   "nvim-treesitter/nvim-treesitter",
-  commit = "40ac56c4938280619211d8a666656f3744b40fcb",
+  commit = "1aea2eee29b43c7ac42aa7487082d1163cd433e3",
   config = function()
     local status_ok, _ = pcall(require, "nvim-treesitter")
     if not status_ok then

@@ -124,6 +124,11 @@ _G.packer_plugins = {
     path = "/Users/harshkumar/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["codeium.vim"] = {
+    loaded = true,
+    path = "/Users/harshkumar/.local/share/nvim/site/pack/packer/start/codeium.vim",
+    url = "https://github.com/Exafunction/codeium.vim"
+  },
   ["darkplus.nvim"] = {
     loaded = true,
     path = "/Users/harshkumar/.local/share/nvim/site/pack/packer/start/darkplus.nvim",
@@ -143,6 +148,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/harshkumar/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/ThePrimeagen/harpoon"
+  },
+  ["hop.nvim"] = {
+    loaded = true,
+    path = "/Users/harshkumar/.local/share/nvim/site/pack/packer/start/hop.nvim",
+    url = "https://github.com/phaazon/hop.nvim"
   },
   ["impatient.nvim"] = {
     loaded = true,
@@ -168,6 +178,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/harshkumar/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["minimal.nvim"] = {
+    loaded = true,
+    path = "/Users/harshkumar/.local/share/nvim/site/pack/packer/start/minimal.nvim",
+    url = "https://github.com/Yazeed1s/minimal.nvim"
   },
   ["moonbow.nvim"] = {
     loaded = true,
@@ -258,6 +273,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/harshkumar/.local/share/nvim/site/pack/packer/start/project.nvim",
     url = "https://github.com/ahmedkhalf/project.nvim"
+  },
+  ["rust-tools.nvim"] = {
+    loaded = true,
+    path = "/Users/harshkumar/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
+    url = "https://github.com/simrat39/rust-tools.nvim"
+  },
+  ["telescope-ui-select.nvim"] = {
+    loaded = true,
+    path = "/Users/harshkumar/.local/share/nvim/site/pack/packer/start/telescope-ui-select.nvim",
+    url = "https://github.com/nvim-telescope/telescope-ui-select.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,

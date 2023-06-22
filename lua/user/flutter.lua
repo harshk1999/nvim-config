@@ -1,3 +1,4 @@
+-- flutter tools is currently not installed so this configuration is useless
 local f_tools = require "flutter-tools"
 
 f_tools.setup {

@@ -40,6 +40,7 @@ vim.opt.iskeyword:append "-" -- treats words with `-` as single words
 vim.opt.formatoptions:remove { "c", "r", "o" } -- This is a sequence of letters which describes how automatic formatting is to be done
 vim.opt.linebreak = true
 vim.opt.relativenumber = true
+vim.opt.listchars = { eol = "↵", tab = "→  ", trail = "·", extends = "$" }
 vim.opt.guifont = { "Hack Nerd Font", ":h20" } -- text below applies for VimScript
 
 vim.opt.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"

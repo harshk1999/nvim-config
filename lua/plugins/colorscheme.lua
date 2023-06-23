@@ -1,15 +1,25 @@
 return {
-  "arturgoms/moonbow.nvim",
-  lazy = false,
-  commit = "2564c8a8efc18eb65104c75b404972e4fabd1d25",
-  priority = 1000,
-  config = function()
-    local colorscheme = "moonbow"
+  {
+    "arturgoms/moonbow.nvim",
+  },
+  {
+    "projekt0n/github-nvim-theme",
+  },
+  {
+    "rebelot/kanagawa.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      local colorscheme = "kanagawa"
 
-    local status_ok, _ = pcall(vim.cmd.colorscheme, colorscheme)
-    if not status_ok then
-      print("Error loading colorscheme " .. colorscheme)
-      return
-    end
-  end,
+      local status_ok, _ = pcall(vim.cmd.colorscheme, colorscheme)
+      if not status_ok then
+        print("Error loading colorscheme " .. colorscheme)
+        return
+      end
+    end,
+  },
+  {
+    "marko-cerovac/material.nvim",
+  },
 }
